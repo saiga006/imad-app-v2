@@ -1,5 +1,5 @@
-var express = require('express');
-var morgan = require('morgan');
+var express = require('express');//library functions for creating the hhtp server ,listening tpo the ports
+var morgan = require('morgan');//to display the logs of requests and response messages
 var path = require('path');
 
 var app = express();
@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-});
+}); //function that responds to a requested url
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
@@ -15,6 +15,9 @@ app.get('/ui/style.css', function (req, res) {
 
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
+});
+app.get('/ui/1408639964981.jpg', function(req,res){
+   res.sendFile(path.join(_dirname,'ui','1408639964981.jpg'));  
 });
 
 
