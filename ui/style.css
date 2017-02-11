@@ -1,7 +1,7 @@
 body {
     font-family: sans-serif;
-    background-color: lightgrey;
-    margin-top: 75px;
+    background-color: white;
+    margin-top: 30px;
 }
 
 .center {
@@ -22,7 +22,6 @@ body {
 
    .saiga {
     max-width: 1240px;
-    margin: 0 auto;
     color: #e40f0f;
     font-family: papyrus;
     padding: 30px;
