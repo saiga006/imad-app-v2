@@ -20,7 +20,7 @@ app.get('/ui/1408639964981.jpg', function(req,res) {
    res.sendFile(path.join(_dirname,'ui','1408639964981.jpg'));  
 });
 app.get('/chrom',function(req,res) {
-    res.sendFile('chrom will be served here');
+    res.sendFile(path.join(_dirname,'ui','chrom.html'));
     
 });
 
