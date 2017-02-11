@@ -20,3 +20,12 @@ body {
     height: 200px;
 }
 
+   .saiga {
+    max-width: 1240px;
+    margin: 0 auto;
+    color: #e40f0f;
+    font-family: papyrus;
+    padding: 30px;
+    border: blueviolet;
+    border-width: thick;
+  }
