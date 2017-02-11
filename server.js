@@ -20,7 +20,7 @@ var chro= {
     
 };
 function createTemplate(data){
-    heading=data.heading;
+    date=data.date;
     title=data.title;
     content=data.content;
 
