@@ -65,6 +65,14 @@ app.get('/ui/madi.png', function (req, res) {
 app.get('/ui/1408639964981.jpg', function(req,res) {
    res.sendFile(path.join(__dirname,'ui','1408639964981.jpg'));  
 });
+var names=[];
+app.get('/submit-name/:name',function(req,res) {
+//get the name from the request
+var name=req.params.name;
+names.push(name);
+//JSON javascript object notation - to convert javascript object(nested) into string so that the browser can render it
+res.send(JSON.stringify(names));
+});
 var counter=0;
 app.get('/counter',function(req,res) {
     counter=counter+1;  //counts the no of visitors
