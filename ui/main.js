@@ -13,3 +13,30 @@ elem2.onclick=function() //function executes on clicking the image
 {
   var interval= setInterval(moveRight,100);//moves the image right by increasing the margin left for each 100ms calls the moveright function
 };
+// webcounter code
+var button=document.getElementById('counter');
+var span=document.getElementById('count');
+//CREATING a request to counter endpoint
+button.onclick= function(){
+var request=new XMLHttpRequest();
+
+
+//recording the response,STORE IT IN A variable and increment the count value
+request.onreadystatechange=function () {
+  if(request.readyState === XMLHttpRequest.DONE)
+  {
+      if (request.status===200)
+    { 
+      var counter=request.ResponseText;
+      span.innerHTML=counter.toString();
+    }
+      
+  }
+};
+//making a request 
+request.open('GET','http://saiga006.imad.hasura-app.io/counter');
+request.send(null);
+
+
+
+};
