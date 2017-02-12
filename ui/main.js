@@ -27,7 +27,7 @@ request.onreadystatechange=function () {
    {
       if (request.status===200)
     { 
-      var counter=request.ResponseText;
+      var counter=request.responseText;
       console.log(counter);
       var span=document.getElementById('count');
     //  counter=counter+1;
