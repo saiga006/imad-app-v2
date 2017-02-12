@@ -15,7 +15,7 @@ elem2.onclick=function() //function executes on clicking the image
 };
 // webcounter code
 var button=document.getElementById('counter');
-var span=document.getElementById('count');
+
 //CREATING a request to counter endpoint
 button.onclick= function(){
 var request=new XMLHttpRequest();
@@ -28,6 +28,7 @@ request.onreadystatechange=function () {
       if (request.status===200)
     { 
       var counter=request.ResponseText;
+      var span=document.getElementById('count');
       span.innerHTML=counter.toString();
     }
       
