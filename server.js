@@ -67,7 +67,7 @@ app.get('/ui/1408639964981.jpg', function(req,res) {
 });
 var counter=0;
 app.get('/counter',function(req,res) {
-    counter=counter+1;
+    counter=counter+1;  //counts the no of visitors
     res.send(counter.toString());
 });
 app.get('/chrom',function(req,res) {
