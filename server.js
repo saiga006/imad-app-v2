@@ -67,7 +67,9 @@ app.get('/ui/1408639964981.jpg', function(req,res) {
 });
 app.get('/chrom',function(req,res) {
     res.send(createTemplate(chro));
-    
+});
+app.get('/ui/main.js',function(req,res){
+    res.sendFile(path.join(__dirname,'ui','main.js'));  
 });
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
