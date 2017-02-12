@@ -37,6 +37,6 @@ request.onreadystatechange=function () {
   }
 };
 //making a request 
-request.open('GET','http://saiga006.imad.hasura-app.io/counter');
+request.open('GET','http://saiga006.imad.hasura-app.io/counter',true);
 request.send(null);
 };
