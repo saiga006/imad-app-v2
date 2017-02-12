@@ -41,17 +41,33 @@ request.open('GET','http://saiga006.imad.hasura-app.io/counter',true);
 request.send(null);
 };
 //submit name
-var namInput=document.getElementById('name');
-var nam2=namInput.value;
 var submit=document.getElementById('submit_btn');
 submit.onclick=function (){
   //make a request to server and send the same
   //capture a list of names and render it as list
-  var names=['name1','name2','name3','name4'];
+  var namInput=document.getElementById('name');
+  var nam2=namInput.value;
+  var request1=new XMLHttpRequest();
+
+
+//recording the response,STORE IT IN A variable and increment the count value
+request1.onreadystatechange=function () {
+ if(request1.readyState === XMLHttpRequest.DONE)
+   {
+      if (request1.status===200)
+    { 
+        var names=request1.responseText;
+        names=JSON.parse(names);
   var list='';
   for (var i=0;i<names.length;i++) {
       list +='<li>'+names[i]+'</li>';
   }
   var ul=document.getElementById('namelist');
   ul.innerHTML=list;
+    }
+      
+  }
+};
+  request1.open('GET','http://saiga006.imad.hasura-app.io/submit-name?name=' + nam2 ,true);
+  request1.send(null);
 };
