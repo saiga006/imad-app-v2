@@ -15,28 +15,29 @@ elem2.onclick=function() //function executes on clicking the image
 };
 // webcounter code
 var button=document.getElementById('counter');
-
+var counter=0;
 //CREATING a request to counter endpoint
 button.onclick= function(){
-var request=new XMLHttpRequest();
+//var request=new XMLHttpRequest();
 
 
 //recording the response,STORE IT IN A variable and increment the count value
-request.onreadystatechange=function () {
-  if(request.readyState === XMLHttpRequest.DONE)
-  {
-      if (request.status===200)
-    { 
-      var counter=request.ResponseText;
-      var span=document.getElementById('count');
+//request.onreadystatechange=function () {
+ //if(request.readyState === XMLHttpRequest.DONE)
+   //{
+     // if (request.status===200)
+    //{ 
+    //  var counter=request.ResponseText;
+   //   var span=document.getElementById('count');
+      counter=counter+1;
       span.innerHTML=counter.toString();
-    }
+   // }
       
-  }
-};
+ // }
+//};
 //making a request 
-request.open('GET','http://saiga006.imad.hasura-app.io/counter');
-request.send(null);
+//request.open('GET','http://saiga006.imad.hasura-app.io/counter');
+//request.send(null);
 
 
 
