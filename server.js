@@ -68,7 +68,7 @@ app.get('/ui/1408639964981.jpg', function(req,res) {
 var names=[];
 app.get('/submit-name/:name',function(req,res) {
 //get the name from the request
-var name=req.params.name;
+var name=req.params.name;//aquiring the name via url and sending it back threough json
 names.push(name);
 //JSON javascript object notation - to convert javascript object(nested) into string so that the browser can render it
 res.send(JSON.stringify(names));
